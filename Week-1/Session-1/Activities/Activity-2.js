@@ -3,21 +3,28 @@
 
 // Task 1: Create variables for different data types
 // TODO: Create a string variable for your name
-
+let myName = Rafael;
 
 // TODO: Create a number variable for your age
+let myAge = 19;
+
 
 
 // TODO: Create a boolean variable for whether you're a student
+let isStudent = true;
 
 
 // Task 2: Print variables to console
 // TODO: Use console.log() to display each variable
-
+console.log(myName);
+console.log(myAge);
+console.log(isStudent);
 
 // Task 3: Experiment with typeof operator
 // TODO: Check the type of each variable using typeof
-
+console.log(typeof myName);
+console.log(typeof myAge);
+console.log(typeof isStudent);
 
 // BONUS CHALLENGES
 // 1. Create a variable that holds your favorite quote

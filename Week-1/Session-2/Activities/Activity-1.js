@@ -6,6 +6,17 @@
 let score = 85;
 // Your code here
 console.log(score)
+if (score>=90) {
+    grade = "A" ;}
+else if (score>=80){
+    grade = "B";
+}else if (score>=70){
+    grade = "C";
+}else if (score>=60){
+    grade = "D";
+}else if (score<60){
+    grade = "F";
+}
 
 
 // Challenge 2: Movie Ticket Pricing
@@ -19,6 +30,11 @@ let isMatinee = true; // true if before 5pm
 // Your code here
 console.log(isMatinee)
 
+if (age < 12) {
+    ticketPrice = 8;}
+if (age <=64){
+    ticketPrice = 12;}
+
 
 // Challenge 3: Weather Advisor
 // TODO: Suggest activity based on temperature and conditions
@@ -29,6 +45,10 @@ console.log(isMatinee)
 let temperature = 72;
 let isRaining = false;
 // Your code here
+
+if (temperature > 85){
+    activity = " Go swimming";}
+
 
 
 // BONUS CHALLENGES
