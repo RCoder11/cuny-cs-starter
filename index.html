@@ -25,15 +25,66 @@
             padding: 20px;
             color: white;
             text-align: center;
-            border: 2.2px solid black;
+            border: 2.2px ridge black;
             margin-top: 60px; 
         }
 
-        .picture-container img:last-child {
-            height: 150px;
-            width: auto;
+        .rating-row {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px 0;
+        }
+
+        .review-box {
+            max-width: 300px;
+            text-align: left;
+            border: 3px solid black; 
+            padding: 10px; 
+            font-family: Impact;
+            font-size: 16px; 
+            line-height: 1.4; 
+            background-color: #DC143C; 
+            color: black;
+            margin-right: 800px; /* space between comment and image */
+        }
+
+        .main-book-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
             position: relative;
-            z-index: 1;
+        }
+
+        .main-book-container img {
+            height: 320px;
+            width: auto;
+            border: 2px solid black;
+            position: relative;
+            left: -560px; 
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            10% { transform: translate(-2px, -2px) rotate(-2deg); }
+            20% { transform: translate(2px, -2px) rotate(2deg); }
+            30% { transform: translate(-2px, 2px) rotate(-2deg); }
+            40% { transform: translate(2px, 2px) rotate(2deg); }
+            50% { transform: translate(-2px, -2px) rotate(-2deg); }
+            60% { transform: translate(2px, -2px) rotate(2deg); }
+            70% { transform: translate(-2px, 2px) rotate(-2deg); }
+            80% { transform: translate(2px, 2px) rotate(2deg); }
+            90% { transform: translate(-1px, -1px) rotate(-1deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        .picture-container a img:hover {
+            animation: shake 0.6s infinite;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -45,27 +96,34 @@
     </p>
 
     <div class="picture-container" style="display: flex; justify-content: space-evenly; align-items: center; flex-wrap: nowrap; padding: 0 20px;">
-        <img src="https://m.media-amazon.com/images/I/51FCRHwOkwL._SY445_SX342_.jpg" alt="book" style="height: 5%; width: 12%; border: 2px solid black;">
-        
-        <img src="https://pictures.abebooks.com/isbn/9781878424617-us.jpg" alt="book" style="height: 5%; width: 12%; border: 2px solid black;">
-        
-        <img src="https://images1.penguinrandomhouse.com/cover/9781611806403" alt="book" style="height: 1%; width: 11%; border: 2px solid black;">
-        
-        <img src="https://m.media-amazon.com/images/I/41-v0MJtL1L._SY445_SX342_.jpg" alt="book" style="height: 5%; width: 11.5%; border: 2px solid black;">
-       
-        <img src="https://m.media-amazon.com/images/I/91dp87xsorL._SY522_.jpg"  alt="book" style="height: 5%; width: 12%; border: 2px solid black;">
+        <a href="#" target="_blank" style="display: contents;">
+            <img src="https://m.media-amazon.com/images/I/51FCRHwOkwL._SY445_SX342_.jpg" alt="book" style="height: 5%; width: 12%; border: 2px solid black; vertical-align: bottom;">
+        </a>
+        <a href="#" target="_blank" style="display: contents;">
+            <img src="https://pictures.abebooks.com/isbn/9781878424617-us.jpg" alt="book" style="height: 5%; width: 12%; border: 2px solid black; vertical-align: bottom;">
+        </a>
+        <a href="#" target="_blank" style="display: contents;">
+            <img src="https://images1.penguinrandomhouse.com/cover/9781611806403" alt="book" style="height: 1%; width: 11%; border: 2px solid black; vertical-align: bottom;">
+        </a>
+        <a href="#" target="_blank" style="display: contents;">
+            <img src="https://m.media-amazon.com/images/I/41-v0MJtL1L._SY445_SX342_.jpg" alt="book" style="height: 5%; width: 11.5%; border: 2px solid black; vertical-align: bottom;">
+        </a>
+        <a href="#" target="_blank" style="display: contents;">
+            <img src="https://m.media-amazon.com/images/I/91dp87xsorL._SY522_.jpg" alt="book" style="height: 6.3%; width: 12.3%; border: 2px solid black; vertical-align: bottom;">
+        </a>
     </div>
 </div>
 
 <div class="bottom-section">
-  <h1 style="color: white; font-family: Impact; margin: 0 0 10px 0; text-align: center;">
-    Bookmark Rating
-  </h1>
+    <p style="text-align: center; color: white; font-size: 40px; font-family: Impact; background-color:#DC143C; margin: 0;">
+        Literary assessment 
+    </p>
 
-  <div class="rating-row" style="display: flex; justify-content: space-between; align-items: center;">
-    <img src="https://m.media-amazon.com/images/I/51FCRHwOkwL._SY445_SX342_.jpg" alt="book" style="height: 6%; width: 10%; border: 2px solid black;">
-  </div>
-</div>
-
+    <div class="main-book-container">
+        <div class="review-box">
+            The <em>Four Agreements</em> is hands down my favorite book. I loved the way each chapter focused on a different agreement, breaking them down in a way that really stuck with me. The ideas were simple but powerful, and I liked how they made me think about the way I live and interact with people. It’s the kind of book that makes you want to reflect and actually put what you learned into practice. Overall, it was inspiring, eye-opening, and honestly a book I could read more than once.
+        </div>
+        <img src="https://m.media-amazon.com/images/I/51FCRHwOkwL._SY445_SX342_.jpg" alt="book">
+    </div>
 </body>
 </html>
