@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Between Chapters: Reflections on Reading</title>
 
+    <!--This is the very start of a web page file. It sets up the page’s language, character encoding, 
+    how it should display on different devices, and the page title that appears in the browser tab.-->
+    
     <style>
         body {
             margin: 0;
-            background-color: #fefefe; 
+            background-color: #fefefe;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; 
+            min-height: 100vh;
         }
 
         .top-content {
-            flex: 0 0 200px; 
+            flex: 0 0 200px;
             overflow: visible;
             position: relative;
         }
@@ -26,48 +29,68 @@
             color: white;
             text-align: center;
             border: 2.2px ridge black;
-            margin-top: 60px; 
+            margin-top: 60px;
         }
 
-        .rating-row {
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 20px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 20px 0;
+        .main-book-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            margin-top: 30px;
+            width: 100%;
         }
 
         .review-box {
             max-width: 300px;
             text-align: left;
-            border: 3px solid black; 
-            padding: 10px; 
             font-family: Impact;
-            font-size: 16px; 
-            line-height: 1.4; 
-            background-color: #DC143C; 
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 1.4;
+            background-color: #DC143C;
             color: black;
-            margin-right: 800px; /* space between comment and image */
+            border: none;
+            padding: 10px 0;
         }
 
-        .main-book-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 20px;
-            position: relative;
+        .stars {
+            font-size: 50px;
+            color: gold;
         }
 
-        .main-book-container img {
-            height: 320px;
-            width: auto;
-            border: 2px solid black;
-            position: relative;
-            left: -560px; 
+        .review-separator {
+            width: 100%;
+            border-bottom: 2px dotted black;
+            margin: 15px 0 0 0;
         }
 
+        .title-line {
+            width: 100%;
+            height: 1.5px;
+            background-color: black;
+            margin: 10px 0 0 0;
+        }
+
+        .title-text {
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            font-family: Impact;
+            background-color: #DC143C;
+            margin: 0;
+            -webkit-text-stroke: 0.5px black;
+            text-stroke: 0.5px black;
+        }
+
+        /* This is a block of CSS, which is the code that controls how a webpage looks. 
+        It sets things like the background color, text style, spacing, layout, and the appearance of 
+        different sections and elements on the page. */
+       /*This CSS is important because it tells the browser how everything should look and be arranged. 
+       It controls the layout, colors, spacing, fonts, and sizes so the page is easy to read and visually organized.*/
+        
+       
         @keyframes shake {
             0% { transform: translate(0, 0) rotate(0deg); }
             10% { transform: translate(-2px, -2px) rotate(-2deg); }
@@ -81,8 +104,12 @@
             90% { transform: translate(-1px, -1px) rotate(-1deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
         }
+/*This is a CSS animation called shake. 
+It tells the browser to move and rotate an element slightly in different 
+directions over time, creating a shaking effect when applied to something like an image or button.
+( how i made the books shake)*/
 
-        .picture-container a img:hover {
+.picture-container a img:hover {
             animation: shake 0.6s infinite;
             cursor: pointer;
         }
@@ -114,16 +141,73 @@
     </div>
 </div>
 
+<!-- This section creates the top part of the webpage with a big, 
+ centered title. Below the title, it displays a row of clickable book images evenly spaced across the screen. 
+ Each image links to a separate page or resource, allowing users to click and explore more about the books. -->
+
 <div class="bottom-section">
-    <p style="text-align: center; color: white; font-size: 40px; font-family: Impact; background-color:#DC143C; margin: 0;">
-        Literary assessment 
+    <p class="title-text">
+        Literary assessment
     </p>
+    <div class="title-line"></div>
 
     <div class="main-book-container">
-        <div class="review-box">
-            The <em>Four Agreements</em> is hands down my favorite book. I loved the way each chapter focused on a different agreement, breaking them down in a way that really stuck with me. The ideas were simple but powerful, and I liked how they made me think about the way I live and interact with people. It’s the kind of book that makes you want to reflect and actually put what you learned into practice. Overall, it was inspiring, eye-opening, and honestly a book I could read more than once.
+        <!-- Book 1 -->
+        <div style="display: flex; align-items: center; width: 100%; margin-bottom: 15px;">
+            <div class="review-box">The <em>Four Agreements</em> is hands down my favorite book. I loved the way each chapter focused on a different agreement, breaking them down in a way that really stuck with me. The ideas were simple but powerful, and I liked how they made me think about the way I live and interact with people. It’s the kind of book that makes you want to reflect and actually put what you learned into practice. Overall, it was inspiring, eye-opening, and honestly a book I could read more than once.</div>
+            <div style="flex-grow: 1; display: flex; justify-content: center;">
+                <img src="https://m.media-amazon.com/images/I/51FCRHwOkwL._SY445_SX342_.jpg" alt="book" style="height: 320px; width: auto; border: 2px solid black; margin-left: -9%;">
+            </div>
+            <div class="stars">★★★★★</div>
         </div>
-        <img src="https://m.media-amazon.com/images/I/51FCRHwOkwL._SY445_SX342_.jpg" alt="book">
+        <div class="review-separator"></div>
+
+        <!-- Book 2 -->
+        <div style="display: flex; align-items: center; width: 100%; margin-bottom: 15px;">
+            <div class="review-box">I really liked The Fifth Agreement. While some parts felt a bit repetitive from The Four Agreements, I still enjoyed how deep each chapter was and how every chapter focused on a specific topic. The ideas were clear and thought-provoking, and I appreciated the way the book expanded on the earlier principles while offering new insights. Overall, it was an engaging and meaningful read.</div>
+            <div style="flex-grow: 1; display: flex; justify-content: center;">
+                <img src="https://pictures.abebooks.com/isbn/9781878424617-us.jpg" alt="book" style="height: 320px; width: auto; border: 2px solid black; margin-left: -13.4%;">
+            </div>
+            <div class="stars">★★★★</div>
+        </div>
+        <div class="review-separator"></div>
+
+        <!-- Book 3 -->
+        <div style="display: flex; align-items: center; width: 100%; margin-bottom: 15px;">
+            <div class="review-box">The Book of Five Rings is a fascinating read that dives into strategy, discipline, and mindset. I really enjoyed how each chapter focuses on a specific concept, giving clear insights into the art of strategy and personal mastery. Some parts are a bit dense, but the lessons are practical and thought-provoking. Overall, it was an engaging book that made me think differently about planning, focus, and decision-making</div>
+            <div style="flex-grow: 1; display: flex; justify-content: center;">
+                <img src="https://images1.penguinrandomhouse.com/cover/9781611806403" alt="book" style="height: 320px; width: auto; border: 2px solid black; margin-left: -16.5%;">
+            </div>
+            <div class="stars">★★★</div>
+        </div>
+        <div class="review-separator"></div>
+
+        <!-- Book 4 -->
+        <div style="display: flex; align-items: center; width: 100%; margin-bottom: 15px;">
+            <div class="review-box">Essentialism is an eye-opening book that taught me the importance of doing less but better. I enjoyed how each chapter breaks down strategies for focusing on what really matters and cutting out the non-essential. The lessons are practical and motivating, making it easy to reflect on my own priorities. Overall, it was a thoughtful and useful read that encourages a more intentional approach to life.</div>
+            <div style="flex-grow: 1; display: flex; justify-content: center;">
+                <img src="https://m.media-amazon.com/images/I/41-v0MJtL1L._SY445_SX342_.jpg" alt="book" style="height: 320px; width: auto; border: 2px solid black; margin-left: -13%;">
+            </div>
+            <div class="stars">★★★★</div> 
+        </div>
+        <div class="review-separator"></div>
+
+        <!-- Book 5 -->
+        <div style="display: flex; align-items: center; width: 100%; margin-bottom: 15px;">
+            <div class="review-box">The Little Red Book of Wisdom is a short but impactful read, packed with practical advice and thoughtful reflections. I liked how each entry offered a clear lesson or insight, making it easy to pause and think about its meaning. The book is simple yet profound, and I found myself coming back to certain passages for guidance. Overall, it was an inspiring and concise read that left a lasting impression.</div>
+            <div style="flex-grow: 1; display: flex; justify-content: center;">
+                <img src="https://m.media-amazon.com/images/I/91dp87xsorL._SY522_.jpg" alt="book" style="height: 320px; width: auto; border: 2px solid black; margin-left: -17%;">
+            </div>
+            <div class="stars">★★★</div> 
+        </div>
+        <div class="review-separator"></div>
     </div>
+</div>
+
 </body>
 </html>
+
+<!--This section of the code creates the lower part of your webpage where each book is displayed with a review. 
+Each book row has three parts: a text box with your review on the left, the book’s image in the center, and star ratings on the right. 
+It organizes the layout using flexible boxes so everything lines up neatly, with separators between each book for visual clarity.-->
+
